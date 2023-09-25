@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    $listings=Listing::all();
+    return view('listings',['listings'=>$listings]);
+});
+
+Route::get('/listings/{id}', function ($id) {
+    $listing=Listing::find($id);
+    return view('listing',['listing'=>$listing]);
+});
+
+
