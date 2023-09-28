@@ -29,6 +29,8 @@ Route::get('/', [ListingController::class,'index']);
 //         abort(404);
 //     }
 // });
+Route::get('/listings/create',[ListingController::class,'create']);
+
 Route::get('/listings/{listing}',[ListingController::class,'show']);
 
 

@@ -15,7 +15,9 @@ class ListingController extends Controller
     public function show(Listing $listing)  {
         return view('listings.show',[
             'listing'=>$listing
-        ]);  
-       
+        ]);         
+    } 
+    public function create(Listing $listing)  {
+        return view('listings.create');         
     }
 }
