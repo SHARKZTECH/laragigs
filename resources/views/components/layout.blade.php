@@ -48,6 +48,8 @@
             Job</a>
     </footer>
 
+    <x-flash-massage />
+
 </body>
 
 </html>
